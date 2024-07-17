@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet, NavLink, useLocation } from 'react-router-dom'
+import {Outlet, NavLink, useLocation } from 'react-router-dom'
 
 const Signup = () => {
 

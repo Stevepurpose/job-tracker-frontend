@@ -58,12 +58,20 @@
   font-size: 0.8rem;
 }
 
-.delete-button {
+.logout{
   background-color: #f44336; /* Red */
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.3rem 0.8rem;
+  border-radius:0.3rem ;
+}
+
+.delete-button{
+  background-color: #f44336; /* Red */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }

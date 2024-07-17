@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Register from './pages/Register';
@@ -23,9 +23,9 @@ function App() {
           }
         />
         <Route path="/signup" element={<Signup/>}>
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register/>} />
-        <Route path="*" element={<NotFound />}></Route>
+        <Route path="/signup/login" element={<Login />} />
+        <Route path="/signup/register" element={<Register/>} />
+      {/* <Route path="*" element={<NotFound />}/>*/}
         </Route>
       </Routes> 
       

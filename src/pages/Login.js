@@ -19,6 +19,7 @@ const Login = () => {
 
       try {
           const res = await Backendurl.post("/api/token/" , { username, password })
+              console.log(res.data)
           
               localStorage.setItem(ACCESS_TOKEN, res.data.access);
               localStorage.setItem(REFRESH_TOKEN, res.data.refresh);

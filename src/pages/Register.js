@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from "react";
 import Backendurl from "../Back";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import LoadingIndicator from "../components/LoadingIndicator";
 import '../App.css'
 
-//import Form from '../components/Form'
+
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -19,8 +19,10 @@ const Register = () => {
 
     try {
       const res = await Backendurl.post("/api/user/register/", { username, password })
+      console.log(res.data)
       alert("Registeration successful, go to login")
       navigate("/signup/login")
+      
     }
 
     catch (error) {
@@ -32,6 +34,7 @@ const Register = () => {
   }
 
   return (
+    <div>
     <form onSubmit={handleSubmit} className="form-container">
             <h1>Registeration Form</h1>
             <input
@@ -54,7 +57,8 @@ const Register = () => {
             </button>
         </form>
        
-  
+      
+       </div>
   )
 }
 
