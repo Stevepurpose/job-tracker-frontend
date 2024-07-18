@@ -19,28 +19,29 @@ const Login = () => {
 
       try {
           const res = await Backendurl.post("/api/token/" , { username, password })
-              console.log(res.data)
+             // console.log(res.data)
           if(res.data.access && res.data.refresh){
               localStorage.setItem(ACCESS_TOKEN, res.data.access);
               localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
               navigate("/") //to home
           }
           else{
-            console.error('invalid token response:', res.data)
+           // console.error('invalid token response:', res.data)
           }
 
             }
            catch (error) {
-            console.error('Login error:', error)
-              if(error.response){
-                console.error('Response Status:', error.response.status)
-              }
-             else if(error.request){
-              console.error('Request data:', error.request) 
-             }
-              else{
-                console.error('Error message:', error.message)
-              }
+            alert(error)
+           // console.error('Login error:', error)
+           //   if(error.response){
+            //    console.error('Response Status:', error.response.status)
+            //  }
+            // else if(error.request){
+             // console.error('Request data:', error.request) 
+             //}
+            //  else{
+             //   console.error('Error message:', error.message)
+             // }
              }
 
            finally {
