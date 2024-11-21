@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { ACCESS_TOKEN } from './constants'
 
-let api_url = process.env.REACT_APP_BACKEND_API_URL
+//let api_url = process.env.REACT_APP_BACKEND_API_URL
 
 const Backendurl = axios.create({
-    baseURL: api_url
+    baseURL: process.env.REACT_APP_BACKEND_API_URL
 })
 
 
